@@ -1876,10 +1876,10 @@ Output:
 @Ks of size NUM_CAMERAS x 3 x 3 -- intrinsic matrices
 @distortions of size NUM_CAMERAS x NUM_PARAMS
  */
-bool calibrateMultiview(InputArrayOfArrays objPoints, const std::vector<std::vector<Mat>> &imagePoints,
+CV_EXPORTS_W bool calibrateMultiview(InputArrayOfArrays objPoints, const std::vector<std::vector<Mat>> &imagePoints,
                         const std::vector<Size> &imageSize, const Mat &visibility,
-                        OutputArrayOfArrays Rs, OutputArrayOfArrays Ts, std::vector<Mat> &Ks,
-                        std::vector<Mat> &distortions,
+                        OutputArrayOfArrays Rs, OutputArrayOfArrays Ts, CV_OUT std::vector<Mat> &Ks,
+                        CV_OUT std::vector<Mat> &distortions,
                         OutputArrayOfArrays rvecs0, OutputArrayOfArrays tvecs0, InputArray is_fisheye,
                         OutputArray errors_per_frame, OutputArray output_pairs, bool USE_INTRINSICS_GUESS=false, int flags_intrinsics=0);
 
